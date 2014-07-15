@@ -2,5 +2,10 @@
 	<h1>Sup yo!</h1>
 	<p>Hey you, gald you were able to join us today.</p>
 	<p>The site is currently under construction. When ready, you'll be able <br>to create image-text to share with your friends!</p>
-	<p><%= link_to "Log in", "#", class: "btn btn-info btn-lg" %> <%= link_to "Sign up", "#", class: "btn btn-danger btn-lg" %></p>
+	<% if user_signed_in? %>
+	# do something
+	<% else %>
+			<p><%= link_to "Log in", new_user_session_path, class: "btn btn-info btn-lg" %> <%= link_to "Sign up", new_user_registration_path, class: "btn btn-danger btn-lg" %>
+			</p>
+	<% end %>
 </div>
