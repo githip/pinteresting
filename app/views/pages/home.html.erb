@@ -1,10 +1,12 @@
 <div class= "jumbotron center"> <!--remove 'center' after jumbotron to keep items in jumbo homepge float left-->
 	
 	<% if user_signed_in? %>
-	<h1>Welcome</h1>
-	<p>Here you'll be able to create Pintext and share it with friends.</p>
-	<p>Pintext is very simple to start, Pick a paper and then wirte a quote, phrase, or a note and click post!</p>
-	<h3>Yes, its that simple</h3>
+	<h1>Hello <%= controller_name %></h1>
+	<p><%= link_to "Create Pintext", new_pin_path, class: "btn btn-info btn-lg" %> <%= link_to "View Pintext",pins_path, class: "btn btn-success btn-lg" %>
+			</p>
+	<p>Create Pintext and share it with friends.</p>
+	<p>Pintext is very simple, you will be able to wirte a quote, a phrase, <br>or a note and share it with your friends!</p>
+	<h3><em>Pintext your thoughts!</em></h3>
 	<% else %>
 			<h1>Pintext</h1>
 			<h3>Inspire and be inspired</h3>
